@@ -1,5 +1,5 @@
 # Tabletop Simulator MTG Tools
-A collection of scripts useful for playing Magic: The Gathering on [Tabletop Simulator](https://store.steampowered.com/app/286160/Tabletop_Simulator/)
+A collection of scripts useful for playing Magic: The Gathering on Pie's [4-player table](https://steamcommunity.com/sharedfiles/filedetails/?id=2296042369) on [Tabletop Simulator](https://store.steampowered.com/app/286160/Tabletop_Simulator/)
 
 # Quality of Life Tools
 ## Declutterer
