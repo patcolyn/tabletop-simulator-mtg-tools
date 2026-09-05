@@ -1,9 +1,12 @@
+
 # Tabletop Simulator MTG Tools
 A collection of scripts useful for playing Magic: The Gathering on [Oops I Baked a Pie](https://steamcommunity.com/profiles/76561197968157267)'s [4](https://steamcommunity.com/sharedfiles/filedetails/?id=2296042369), [6](https://steamcommunity.com/sharedfiles/filedetails/?id=2293586471), and [8-player tables](https://steamcommunity.com/sharedfiles/filedetails/?id=2294743862) on [Tabletop Simulator](https://store.steampowered.com/app/286160/Tabletop_Simulator/)
 
 # Quality of Life Tools
 ## Declutterer
 When loaded, removes aesthetic-only and duplicate assets from the table. Great for lower end machines.
+<img width="724" height="367" alt="Tabletop_Simulator_dOGLsWxTWs" src="https://github.com/user-attachments/assets/4e3c5f1e-4403-4d5d-8fdf-e5ffc9ec8ca0" />
+
 
 # Card Automators
 ## Mill Selected Players
@@ -22,6 +25,7 @@ https://github.com/user-attachments/assets/ba7fe8c7-3280-493f-af0a-f7331f9b28a6
 
 ## Norin Handler
 Moves [Norin the Wary](https://scryfall.com/card/tsp/171/norin-the-wary) between exile and the battlefield automatically.
+
 Features a toggleable detection system for when players cast spells.
 
 https://github.com/user-attachments/assets/fb4c3341-8518-4c7a-bf88-8c65805ab0e0
