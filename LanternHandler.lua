@@ -1,13 +1,11 @@
+﻿--------------------------------------------------------
 -- Lantern Handler
+-- For Pie's 4, 6, and 8-Player Tables
+-- https://steamcommunity.com/profiles/76561197968157267/myworkshopfiles/
 
---[[ Description
-Lantern of Insight handler
-
-Reveals the top card of each player's library. Supports drawing/milling/scrying.
-
-Flip the revealed card manually to disable temporarily for shuffling or searching.
-]]
-
+-- Written by Patty
+-- https://steamcommunity.com/id/Patty42/
+--------------------------------------------------------
 local flipEnabled = false
 
 local inFlight = {
@@ -35,9 +33,9 @@ local libZones = {"166036", "2365d0", "033b34", "c04462"}
 local scryZones = {"7295a1", "640235", "350f7f", "bb8c76"}
 
 
--- ============================================================
+-- --------------------------------------------------------
 -- Utility helpers
--- ============================================================
+-- --------------------------------------------------------
 
 function inTable(obj, tab)
 -- Check if value is in table, return key
@@ -78,9 +76,9 @@ function flipTopOfDeck(deckObj)
 end
 
 
--- ============================================================
+-- --------------------------------------------------------
 -- Zone-specific actions
--- ============================================================
+-- --------------------------------------------------------
 
 --- Find a single deck inside a library zone and flip its top card
 function flipDeckInZone(zoneKey)
@@ -129,9 +127,9 @@ function unflipCardsInZone(zoneKey)
 end
 
 
--- ============================================================
+-- --------------------------------------------------------
 -- Central safety gatekeeper
--- ============================================================
+-- --------------------------------------------------------
 
 --- Check safety conditions, then flip the top card of the deck
 function tryFlipTop(zoneKey)
@@ -167,9 +165,9 @@ function tryFlipTop(zoneKey)
 end
 
 
--- ============================================================
+-- --------------------------------------------------------
 -- Zone event handlers
--- ============================================================
+-- --------------------------------------------------------
 
 --- A card left a scry zone: Flip if the scry zone is empty
 function handleScryZoneLeaving(zoneKey, zoneGUID)
@@ -233,9 +231,9 @@ function handleScryZoneEntering(object)
 end
 
 
--- ============================================================
+-- --------------------------------------------------------
 -- Top-level events
--- ============================================================
+-- --------------------------------------------------------
 
 function toggleFlip(playerColor)
     if Info.name ~= "MTG EDH 4-player (π)" then
@@ -303,6 +301,7 @@ function onObjectRotate(object, spin, flip, player_color, old_spin, old_flip)
 	
 	for _, zone in ipairs(zones) do
 		local zoneKey = inTable(zone.getGUID(), libZones)
+		print(zoneKey)
 		if zoneKey then abortFlip[zoneKey] = true end
 	end
 end
