@@ -1,8 +1,15 @@
 -- Declutterer
 
 function onLoad()
-    if Info.name ~= "MTG EDH 4-player (π)" then return end
-    local declutterObject = getObjectFromGUID("e40450")
+	if not string.match(Info.name, "^MTG EDH [468]%-player %(π%)$") then return end
+	
+	local declutterObject = nil
+	for _,obj in ipairs(getObjects()) do
+		if obj.getName() == "Table Instructions" then
+			declutterObject = obj
+		end
+	end
+
     if declutterObject then declutterObject.call("closeSelf") end
 
     -- Custom star field
